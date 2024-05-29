@@ -15,7 +15,7 @@ export const Main = () => {
                     <MainTitle>A Web Developer. </MainTitle>
                 </div>
                 
-                <Photo src={photo} alt=''/>
+                <Photo src={photo} alt='my Photo'/>
             </FlexWrapper>
             
         </StyledMain>

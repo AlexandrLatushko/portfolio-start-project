@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 export const Menu = (props: {menuItems: Array<string>}) => {
     return (
-        <SryledMemu>
+        <StyledMemu>
             <ul>
 
                 {props.menuItems.map((item:string, index:number)=>{
@@ -14,11 +14,11 @@ export const Menu = (props: {menuItems: Array<string>}) => {
                 })}
 
             </ul>
-        </SryledMemu>
+        </StyledMemu>
     );
 };
 
-const SryledMemu = styled.nav`
+const StyledMemu = styled.nav`
     ul {
         display: flex;
         gap: 30px;

@@ -7,5 +7,4 @@ export const Container = styled.div`
     padding: 0 15px; //сверу и снизу 0 а по бокам 15px
     margin: 0 auto;
     border: 1px solid red;
-
 `

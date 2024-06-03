@@ -1,7 +1,6 @@
 import React from 'react';
 import { Icon } from '../../../../../components/icon/Icon';
 import styled from 'styled-components';
-import { theme } from '../../../../../styles/Theme';
 
 type SkillPropsType = {
     iconId: string
@@ -31,16 +30,12 @@ const StyledSkill = styled.div`
 
 const SkillTitle = styled.h3`
     margin: 70px 0 15px;
-    font-family: "Josefin Sans", sans-serif;
-    font-weight: 700;
-    font-size: 16px;
-    letter-spacing: 0.06em;
+   
     text-transform: uppercase;
 `
 
 const SKillText = styled.p`
-    font-weight: 400;
-    font-size: 14px;
+    
 `
 
 const IconWrapper = styled.div`

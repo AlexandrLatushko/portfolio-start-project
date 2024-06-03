@@ -35,6 +35,10 @@ export const GlobalStyled = createGlobalStyle`
         border: none;
     }
 
+    section {
+        padding: 100px 0;
+    }
+
     section:nth-of-type(odd) { //для каждой четной секции применятся стили 
         background-color: ${theme.colors.primaryBg}
     }

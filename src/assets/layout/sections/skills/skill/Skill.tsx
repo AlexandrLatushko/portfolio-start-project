@@ -1,6 +1,7 @@
 import React from 'react';
 import { Icon } from '../../../../../components/icon/Icon';
 import styled from 'styled-components';
+import { theme } from '../../../../../styles/Theme';
 
 type SkillPropsType = {
     iconId: string
@@ -40,6 +41,8 @@ const SKillText = styled.p`
 
 export const IconWrapper = styled.div`
     position: relative;
+
+    color: ${theme.colors.accent};
 
     &::before {
         content: "";

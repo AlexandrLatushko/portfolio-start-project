@@ -46,10 +46,6 @@ const ImageWrapper = styled.div`
 
     &:hover {
 
-        ${Button} {
-            opacity: 1; //делаем видимым при наведении 
-        }
-
         &::before {
             content: "";
             position: absolute;
@@ -58,8 +54,12 @@ const ImageWrapper = styled.div`
             right: 0;
             bottom: 0;
             background: rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(8px);
+            backdrop-filter: blur(4px);
     }
+    
+    ${Button} {
+            opacity: 1; //делаем видимым при наведении 
+        }
     }
 
     ${Button} {
@@ -68,13 +68,6 @@ const ImageWrapper = styled.div`
         top: 50%;
         transform: translate(-50%, -50%);
         opacity: 0;
-        
-
-        &::before {
-            width: 100%;
-            height: 100%;
-            
-        }
     }
     
 `

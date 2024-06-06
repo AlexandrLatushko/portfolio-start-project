@@ -31,7 +31,12 @@ export const HeaderMenu = (props: {menuItems: Array<string>}) => {
 const StyledHeaderMemu = styled.nav`
     ul {
         display: flex;
+        justify-content: center;
         gap: 30px;
+    }
+
+    @media ${theme.media.tablet} { //задаем из темы медиазапрос
+        display: none;             // при экране меньше чем задано дло tablet этот блок пропадет 
     }
     
 `

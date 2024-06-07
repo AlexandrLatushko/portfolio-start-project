@@ -24,14 +24,14 @@ export const Skill = (props: SkillPropsType) => {
 };
 
 const StyledSkill = styled.div`
-    width: 380px;
+    width: 330px;
+    flex-grow: 1;//тут говорим что каждый будет занимать челое свободное пространство (1 )
     text-align: center;
     padding: 62px 20px 40px;
 `
 
 const SkillTitle = styled.h3`
     margin: 70px 0 15px;
-   
     text-transform: uppercase;
 `
 

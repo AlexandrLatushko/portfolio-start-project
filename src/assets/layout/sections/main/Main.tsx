@@ -58,9 +58,7 @@ const PhotoWrapper = styled.div`
             height: 414px;
             top:-10px;
             left: 15px;
-
         }
-
     }
 `
 

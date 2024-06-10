@@ -5,19 +5,23 @@ import { Icon } from '../../../../components/icon/Icon';
 import { Slider } from '../../../../components/slider/Slider';
 import { FlexWrapper } from '../../../../components/FlexWrapper';
 import { IconWrapper } from '../skills/skill/Skill';
+import { Container } from '../../../../components/Container';
 
 export const Testimony = () => {
     return (
         <StyledTestimony>
-            <SectionsTitle> Testimony </SectionsTitle>
-            <FlexWrapper direction={"column"} align={'center'}>
+            <Container>
+                <SectionsTitle> Testimony </SectionsTitle>
+                <FlexWrapper direction={"column"} align={'center'}>
+                    
+                    <IconWrapper>
+                        <Icon iconId={"quote"}/>
+                    </IconWrapper>
+                    
+                    <Slider/>
+                </FlexWrapper>
                 
-                <IconWrapper>
-                    <Icon iconId={"quote"}/>
-                </IconWrapper>
-                
-                <Slider/>
-            </FlexWrapper>
+            </Container>
             
         </StyledTestimony>
     );

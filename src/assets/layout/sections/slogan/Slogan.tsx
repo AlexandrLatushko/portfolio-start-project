@@ -13,10 +13,8 @@ export const Slogan = () => {
                     <SectionsTitle>I Am Available For Freelance</SectionsTitle>
                     <Button>Hire me </Button>
                 </FlexWrapper>
-                
             </Container>
-            
-            
+        
         </StyledSlogan>
     );
 };

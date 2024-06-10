@@ -19,11 +19,13 @@ export const TabMenu = (props: {menuItems: Array<string>}) => {
 };
 
 const StyledTabMemu = styled.nav`
-    margin-bottom: 40px;
     ul {
         display: flex;
-        justify-content: center;
-        gap: 20px;
+        justify-content: space-between;
+        max-width: 352px;
+        width: 100%;
+
+        margin: 0 auto 40px;
     }
     
 `

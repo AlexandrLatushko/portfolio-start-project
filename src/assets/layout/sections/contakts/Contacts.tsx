@@ -1,5 +1,4 @@
-import React from 'react';
-import styled from 'styled-components';
+  import styled from 'styled-components';
 import { SectionsTitle } from '../../../../components/SectionsTitle';
 import { Button } from '../../../../components/Button';
 import { Container } from '../../../../components/Container';
@@ -22,7 +21,7 @@ export const Contacts = () => {
         </StyledContacts>
     );  
 };
- 
+
 const StyledContacts = styled.section`
 `
 

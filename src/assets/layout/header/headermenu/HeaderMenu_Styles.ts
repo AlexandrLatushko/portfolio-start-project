@@ -1,46 +1,81 @@
-import React from 'react';
-import styled, { css }  from 'styled-components';
-import { theme } from '../../../../styles/Theme';
+import { css } from "styled-components"
+import styled from "styled-components"
+import { theme } from "../../../../styles/Theme"
 
-export const MobileMenu = (props: {menuItems: Array<string>}) => {
-    return (
-        <StyledMobileMenu>
-            <BurgerButton isOpen={false}> 
-                <span></span>
-            </BurgerButton>
 
-            <MobileMenuPopup isOpen={false}>
-                <ul>
-                    {props.menuItems.map((item:string, index:number)=>{
-                        return <ListItem key={index}> 
-                        <LinkItem href="#">
-                            {item}
-                            <Mask>
-                                <span>{item}</span>
-                            </Mask>
-                            <Mask>
-                                <span>{item}</span>
-                            </Mask>
-                        
-                        </LinkItem> 
-                    </ListItem>
-                    })}
-                </ul>
-            </MobileMenuPopup>
-            
-        </StyledMobileMenu>
-    );
-};
+const Mask = styled.span`
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    height: 50%;
+    overflow-y: hidden;
+    /* outline: 1px solid red; */
+    color: ${theme.colors.accent};
 
-const StyledMobileMenu = styled.nav`
-    
+    & + & {
+        top: 50%;
+        span {
+            display: inline-block;
+            transform: translateY(-50% );
+        }
+
+    }
+`
+
+const MenuItem = styled.li`
+    position: relative;
+
+    &::before {
+        content: " ";
+        display: inline-block;
+        height: 3px;
+        background-color: ${theme.colors.accent};
+
+        position: absolute;
+        top: 50%;
+        left: -10px;
+        right: -10px;
+        z-index: 1;
+
+        transform: scale(0);
+    }
+
+    &:hover {
+        &::before {
+            transform: scale(1);
+
+        }
+
+        ${Mask} {
+            transform: skewX(12deg) translateX(5px);
+            color: ${theme.colors.font};
+
+            &  + ${Mask} {
+                transform: skewX(12deg) translateX(-5px);
+            }
+        }
+    }
+`
+const LinkItem = styled.a`
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    color: transparent;
+
+`
+
+// MobileMenu 
+
+const MobileMenu = styled.nav`
+/*     
     display: none;  //по умолчанию этого мобильного меню отображаться не будет (только для мобильных)
 
 
     @media ${theme.media.tablet} { //задаем из темы медиазапрос
         display: block;             // при экране меньше чем задано дло tablet этот блок появится  
     }
-    
+     */
 `
 
 const MobileMenuPopup = styled.div<{isOpen:boolean}>`
@@ -122,66 +157,29 @@ const BurgerButton = styled.button<{isOpen:boolean}>`
     }
 `
 
-const LinkItem = styled.a`
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 30px;
-    font-weight: 400;
-    color: transparent;
+// desktopMenu
 
-`
-
-const Mask = styled.span`
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: inline-block;
-    height: 50%;
-    overflow-y: hidden;
-    /* outline: 1px solid red; */
-    color: ${theme.colors.accent};
-
-    & + & {
-        top: 50%;
-        span {
-            display: inline-block;
-            transform: translateY(-50% );
-        }
-
-    }
-`
-
-const ListItem = styled.li`
-    position: relative;
-
-    &::before {
-        content: " ";
-        display: inline-block;
-        height: 3px;
-        background-color: ${theme.colors.accent};
-
-        position: absolute;
-        top: 50%;
-        left: -10px;
-        right: -10px;
-        z-index: 1;
-
-        transform: scale(0);
+const DesktopMenu = styled.nav`
+    ul {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
     }
 
-    &:hover {
-        &::before {
-            transform: scale(1);
-
-        }
-
-        ${Mask} {
-            transform: skewX(12deg) translateX(5px);
-            color: ${theme.colors.font};
-
-            &  + ${Mask} {
-                transform: skewX(12deg) translateX(-5px);
-            }
-        }
-
-    }
+    /* @media ${theme.media.tablet} { //задаем из темы медиазапрос
+        display: none;             // при экране меньше чем задано дло tablet этот блок пропадет 
+    } */
+    
 `
+
+
+
+export const S = {
+    MenuItem,
+    LinkItem,
+    Mask,
+    MobileMenu,
+    MobileMenuPopup,
+    BurgerButton,
+    DesktopMenu
+}

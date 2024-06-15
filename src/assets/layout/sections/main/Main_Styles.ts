@@ -55,8 +55,11 @@ const MainTitle = styled.h1`
     ${font({weight: 400,
             Fmax:27,
             Fmin:20
-        },          
-    )}
+        }
+    )};
+    p {
+        display: none;
+    }
     /* font-weight: 400;
     font-size: 27px; */
 `

@@ -2,14 +2,20 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from '../../../../../components/Link';
 
-export const TabMenu = (props: {menuItems: Array<string>}) => {
+type TabMenuPropsType = {
+    tabsItems: Array<{status: "all" | "landing" | "react" | "spa" ,title: string}>
+    chengeFilterStatus: (value: "all" | "landing" | "react" | "spa") => void
+    currentFilterStatus: string
+}
+
+export const TabMenu = (props: TabMenuPropsType ) => {
     return (
         <StyledTabMemu>
             <ul>
 
-                {props.menuItems.map((item:string, index:number)=>{
+                {props.tabsItems.map((item, index)=>{
                     return  <ListItem key={index}> 
-                        <Link href="#">{item}</Link> 
+                        <Link active={props.currentFilterStatus === item.status} as={"button"} onClick={()=>{props.chengeFilterStatus(item.status)}}>{item.title}</Link> 
                             </ListItem>
                 })}
 

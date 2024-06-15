@@ -8,12 +8,14 @@ const Works = styled.section`
     ${FlexWrapper} {
         gap: 30px;
     }
+    position: relative;
 `
 
 const Work = styled.div`
     background-color: ${theme.colors.secondaryBg};
     width: 330px; //такой как на мобилках
-    flex-grow: 1; //флекс элемент будет занимать всю свободную чать  
+    flex-grow: 1;
+    max-width: 540px; //флекс элемент будет занимать всю свободную чать  
 
     ${Link} {
         padding: 10px 0;

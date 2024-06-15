@@ -3,7 +3,7 @@ import { theme } from '../../../../../styles/Theme';
 
 
 const SectionsSkills = styled.section`
-
+    position: relative;
 `
 
 const Skill = styled.div`

@@ -10,7 +10,6 @@ const Mask = styled.span`
     display: inline-block;
     height: 50%;
     overflow-y: hidden;
-    /* outline: 1px solid red; */
     color: ${theme.colors.accent};
 
     & + & {
@@ -57,7 +56,7 @@ const MenuItem = styled.li`
         }
     }
 `
-const LinkItem = styled.a`
+const NavLink = styled.a`
     font-family: 'Josefin Sans', sans-serif;
     font-size: 30px;
     font-weight: 400;
@@ -176,7 +175,7 @@ const DesktopMenu = styled.nav`
 
 export const S = {
     MenuItem,
-    LinkItem,
+    NavLink,
     Mask,
     MobileMenu,
     MobileMenuPopup,

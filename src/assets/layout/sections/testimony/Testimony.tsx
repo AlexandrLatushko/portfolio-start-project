@@ -9,7 +9,7 @@ import { IconWrapper } from '../skills/skill/Skills_Styles';
 
 export const Testimony:React.FC = () => {
     return (
-        <StyledTestimony>
+        <StyledTestimony id = {'testimony'}>
             <Container>
                 <SectionsTitle> Testimony </SectionsTitle>
                 <FlexWrapper direction={"column"} align={'center'}>

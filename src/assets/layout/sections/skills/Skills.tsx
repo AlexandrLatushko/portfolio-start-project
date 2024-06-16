@@ -42,7 +42,7 @@ const scillData = [
 
 export const Skills = () => {
     return (
-        <S.SectionsSkills>
+        <S.SectionsSkills id = {"skils"}>
             <Container>
                 
                 <SectionsTitle>My Skills</SectionsTitle>

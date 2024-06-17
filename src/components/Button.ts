@@ -15,6 +15,7 @@ export const Button = styled.button`
             width: 100%;
             height: 100%;
             z-index: -1;
+            transition: ${theme.animation.transition};
         }
     }
 

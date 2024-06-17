@@ -4,6 +4,8 @@ import { SectionsTitle } from '../../../../components/SectionsTitle';
 import { Skill } from './skill/Skill';
 import { Container } from '../../../../components/Container';
 import { S } from './skill/Skills_Styles';
+import { Fade } from "react-awesome-reveal";
+
 
 
 const scillData = [
@@ -48,12 +50,14 @@ export const Skills = () => {
                 <SectionsTitle>My Skills</SectionsTitle>
                 
                 <FlexWrapper wrap={'wrap'} justify={'space-between'}> 
-
+                <Fade cascade={true} damping={0.3}>
                     {scillData.map((s , index )=> {
                         return <Skill iconId={s.iconId} key={index} 
                                     title={s.title} 
                                     description={s.description}/>
                     })}
+                </Fade>
+                    
 
                 </FlexWrapper>
             </Container>
@@ -62,4 +66,3 @@ export const Skills = () => {
     );
 };
 
-  

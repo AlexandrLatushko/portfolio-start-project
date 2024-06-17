@@ -52,6 +52,7 @@ const SocialIconLink = styled.a`
     &:hover {
         color: ${theme.colors.primaryBg};
         transform: translateY(-5px);
+        transition: ${theme.animation.transition};
     }
 `
 
